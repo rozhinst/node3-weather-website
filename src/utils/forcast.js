@@ -11,7 +11,7 @@ const forecast =(latitude,longitude, callback) =>{
             callback('Unfound Location.Try another search!', undefined)
         }
         else{
-            callback(undefined,  body.daily.data[0].summary + "it is " + body.currently.temperature + " There is a " + body.currently.precipProbability + " of rain")
+            callback(undefined,  body.daily.data[0].summary + "it is " + body.currently.temperature + " There is a " + body.currently.precipProbability + "% of rain.Humidity is  " +  body.daily.data[0].humidity + ".\n\nIcon:\n" +  body.daily.data[0].icon)
         }
 
     })
